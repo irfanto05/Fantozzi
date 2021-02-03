@@ -15,7 +15,7 @@ pip3 install easysnmp
 pip3 install rrdtool
 ```
 Lo script utilizza il Mib HOST-RESOURCES-MIB (.1.3.6.1.2.1.25)
-Inoltre per evitare errori come come:
+Inoltre per evitare errori come:
 ```bash
 easysnmp.exceptions.EASYSNMPUnknownObjectIDError: unknown object id (hrStorageSize)
 ```
