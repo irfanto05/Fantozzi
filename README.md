@@ -54,7 +54,7 @@ Per monitorare il numero dei processi attivi basterà andare nella cartella repo
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
 
 # Sviluppo e testing
-Lo script è stato realizzato con Gedit 3.38.0, su sistema operativo Ubuntu 20.10, eseguito su macchina virtuale Oracole Virtualbox 6.1;  ed è stato testato monitorando un agent su cui è installato Windows 10 Pro.
+Lo script è stato realizzato con Gedit 3.38.0 su sistema operativo Ubuntu 20.10, eseguito su macchina virtuale Oracole Virtualbox 6.1;  ed è stato testato monitorando un agent su cui è installato Windows 10 Pro.
 Per abilitare il servizio snmp su Windows 10 seguire i seguenti steps:
 - Fare click su "Start"
 - Cliccare su "Impostazioni""
