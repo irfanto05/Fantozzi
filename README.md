@@ -62,7 +62,9 @@ Per abilitare il servizio snmp su Windows 10 seguire i seguenti steps:
 - Selezionare sulla destra "App e Funzionalità"
 - Sulla sinistra di "App e Funzionalità" cliccare su "Funzionalità facoltative"
 - Cercare nell'elenco Simple Network Management Protocol e attendere l'installazione
-Una vlta che il servizio sarà abilitato bisognerà configurarlo:
+
+Una volta che il servizio sarà abilitato bisognerà configurarlo:
+
 - Fare click su "Start"
 - Digitare "Servizi" e cliccarci
 - Cercare "Servizio SNMP" nell'elenco
