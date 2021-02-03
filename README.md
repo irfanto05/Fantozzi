@@ -25,10 +25,12 @@ Inoltre è necessario abilitare i MIB appropriati andando a modificare il file i
 ```
 
 # Utilizzo
-Basterà digitare il comando
+Basterà digitare il comando:
 ```bash
 python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
 Dove hostname è l'host target del monitoraggio e community è la community SNMP a quel punto compariranno alcune statistiche sul temrinale, mentre per monitorare il numero dei processi attivi basterà andare nella cartella reports (generata dal programma) e aprire i files .png corrispondenti alle metriche:
-![alt text]()
 
+![alt text](https://github.com/irfanto05/Fantozzi/blob/main/ram_graph.png)
+![alt text](https://github.com/irfanto05/Fantozzi/blob/main/process_graph.png)
+![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
