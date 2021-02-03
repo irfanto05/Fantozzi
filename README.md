@@ -1,6 +1,6 @@
 # Info
 
-Questo semplice script realizzato in Python è stato creato per monitorare il numero di processi attivi, la Ram occupata e la Ram libera di un sistema su cui gira un Agent SNMP.
+Questo semplice script realizzato in Python è stato creato per monitorare il numero di processi caricati e attivi, la Ram occupata e la Ram libera di un sistema operativo Windows su cui è stata abilitata la funzionalità snmp (non attiva di defalut su Windows 10 Pro)
 
 # Installazione
 Per poter utilizzare il software è necessario installare i seguenti pacchetti:
@@ -55,3 +55,26 @@ Per monitorare il numero dei processi attivi basterà andare nella cartella repo
 
 # Sviluppo e testing
 Lo script è stato realizzato con Gedit 3.38.0, su sistema operativo Ubuntu 20.10, eseguito su macchina virtuale Oracole Virtualbox 6.1;  ed è stato testato monitorando un agent su cui è installato Windows 10 Pro.
+Per abilitare il servizio snmp su Windows 10 seguire i seguenti steps:
+- Fare click su "Start"
+- Cliccare su "Impostazioni""
+- Clicare su "App"
+- Selezionare sulla destra "App e Funzionalità"
+- Sulla sinistra di "App e Funzionalità" cliccare su "Funzionalità facoltative"
+- Cercare nell'elenco Simple Network Management Protocol e attendere l'installazione
+Una vlta che il servizio sarà abilitato bisognerà configurarlo:
+- Fare click su "Start"
+- Digitare "Servizi" e cliccarci
+- Cercare "Servizio SNMP" nell'elenco
+- Fare click destro col mouse
+- Selezionare "proprietà"
+- Nella sezione "Sicurezza" disattivare la spunta "Invia Trap di autenticazione"
+- Sempre nella sezione "Sicurezza" cliccare sul tasto "aggiungi" sotto "Community" 
+- Nella finestra selezionare i diritti (minimo solo lettura)
+- Digitare il nome della community che si vuole attribuire (da usare poi come input al parametro communuty dello script)
+- Cliccare su "aggiungi"
+- Cliccare su "applica"
+- Chiudere le proprietà e cliccare nuovamente col tasto destro del mouse su "Servizio SNMP"
+- Cliccare su "Riavvia"
+
+Fatta tutta la condivisione sarà possibile eseguire lo script e monitorare i dati
