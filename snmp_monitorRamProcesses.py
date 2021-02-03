@@ -155,15 +155,15 @@ while(1):
   
     ## Graph for processes
     rrdtool.update("reports/proc.rrd","N:"+ str(nproc))
-    rrdtool.graph("reports/process_graph.png","--start","now-30sec","--end","now","DEF:in=reports/proc.rrd:proc:AVERAGE","LINE:in#0000ff:Active process")
+    rrdtool.graph("reports/process_graph.png","--start","now-30sec","--end","now","DEF:in=reports/proc.rrd:proc:AVERAGE","LINE:in#0000ff:Active and loaded process")
     
     ## Graph for busy Ram
     rrdtool.update("reports/ram.rrd","N:"+ str(nram))
-    rrdtool.graph("reports/ram_graph.png","--start","now-30sec","--end","now","DEF:in=reports/ram.rrd:ram:AVERAGE","LINE:in#ff1203:Used Ram")
+    rrdtool.graph("reports/ram_graph.png","--start","now-30sec","--end","now","DEF:in=reports/ram.rrd:ram:AVERAGE","LINE:in#ff1203:Used Ram in Gb")
    
     ## Graph for free Ram
     rrdtool.update("reports/freeRam.rrd","N:"+ str(oram))
-    rrdtool.graph("reports/freeRam_graph.png","--start","now-30sec","--end","now","DEF:in=reports/freeRam.rrd:freeRam:AVERAGE","LINE:in#00ff00:Free Ram")
+    rrdtool.graph("reports/freeRam_graph.png","--start","now-30sec","--end","now","DEF:in=reports/freeRam.rrd:freeRam:AVERAGE","LINE:in#00ff00:Free Ram in Gb")
  
     ## For not flood of requestes the agent sleep some seconds
     time.sleep(2)
