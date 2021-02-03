@@ -20,7 +20,7 @@ Inoltre per evitare errori come come:
 easysnmp.exceptions.EASYSNMPUnknownObjectIDError: unknown object id (hrStorageSize)
 ```
 Bisognerà andare a modificare il file in "/etc/snmp/snmp.conf" aprendolo con un editor di testo e modificare la riga "mibs: "e commentandola
-Cioè da:
+da:
 ```bash
 # As the snmp packages come without MIB files due to license reasons, loading
 # of MIBs is disabled by default. If you added the MIBs you can reenable
@@ -34,7 +34,6 @@ a:
 # loading them by commenting out the following line.
 #mibs : 
 ```
-
 # Utilizzo
 Per avviarlo basta digitare il comando:
 ```bash
@@ -53,3 +52,6 @@ Per monitorare il numero dei processi attivi basterà andare nella cartella repo
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/ram_graph.png)
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/process_graph.png)
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
+
+#Sviluppo e testing
+Lo script è stato realizzato con Gedit 3.38.0, su sistema operativo Ubuntu 20.10 ed è stato testato monitorando un agent su cui è installato Windows 10 Pro.
