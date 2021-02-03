@@ -4,9 +4,9 @@ Questo semplice script realizzato in Python è stato creato per monitorare il nu
 
 # Installazione
 Per poter utilizzare il software è necessario installare i seguenti pacchetti:
--Python 3.9
--easysnmp
--rrdtool
+- Python 3.9
+- easysnmp
+- rrdtool
 con i seguenti comandi bash:
 
 ```bash
@@ -41,13 +41,14 @@ Per avviarlo basta digitare il comando:
 python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
 Dove hostname è l'host target del monitoraggio e community è la community SNMP, a quel punto compariranno alcune statistiche sul terminale quali:
---> Numero di utenti presenti sul sistema operativo
---> Data del sistema
---> Ram totale del sistema
---> Spazio totale su disco
---> Spazio occupato su disco
-
-Per monitorare il numero dei processi attivi basterà andare nella cartella reports (generata dal programma) e aprire i files .png corrispondenti alle metriche:
+```bash
+--> Numero di utenti presenti sul sistema operativo: integer
+--> Data del sistema: AAAA-MM-GG HH:MM:SS.mmmmmm
+--> Ram totale del sistema: in Gb
+--> Spazio totale su disco: in Gb
+--> Spazio occupato su disco: in Gb
+```
+Per monitorare il numero dei processi attivi basterà andare nella cartella reports,generata dal programma nella stessa directory in cui si trova lo script, e aprire i files .png corrispondenti alle metriche:
 
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/ram_graph.png)
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/process_graph.png)
