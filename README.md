@@ -1,4 +1,4 @@
-# Info
+# Intro
 
 Questo semplice script realizzato in Python è stato creato per monitorare il numero di processi caricati e attivi, la Ram occupata e la Ram libera di un sistema operativo Windows su cui è stata abilitata la funzionalità snmp (non attiva di defalut su Windows 10 Pro)
 
