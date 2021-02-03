@@ -41,6 +41,7 @@ python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
 Dove hostname è l'host target del monitoraggio e community è la community SNMP, a quel punto compariranno alcune statistiche sul terminale quali:
 ```bash
+--> Informazioni sistema operativo: Stringa
 --> Numero di utenti presenti sul sistema operativo: integer
 --> Data del sistema: AAAA-MM-GG HH:MM:SS.mmmmmm
 --> Ram totale del sistema: in Gb
