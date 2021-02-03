@@ -50,12 +50,15 @@ Dove hostname è l'host target del monitoraggio e community è la community SNMP
 Per monitorare il numero dei processi attivi basterà andare nella cartella reports,generata dal programma nella stessa directory in cui si trova lo script, e aprire i files .png corrispondenti alle metriche:
 
 Grafico per la Ram utilizzata:
+
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/ram_graph.png)
 
 Grafico per i Processi caricati e in esecuzione:
+
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/process_graph.png)
 
 Grafico per la Ram libera:
+
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
 
 # Sviluppo e testing
