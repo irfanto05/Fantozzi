@@ -2,7 +2,8 @@
 
 Questo semplice script realizzato in Python è stato creato per monitorare il numero di processi caricati e attivi, la Ram occupata e la Ram libera di un sistema operativo Windows su cui è stata abilitata la funzionalità snmp.
 
-Per prima cosa sarà necessario abilitare il servizio snmp sul sistema Windows 10 che si vuole monitorare seguendo i seguenti passi:
+# Attivare Agent SNMP su Windows 10
+Per prima cosa è necessario abilitare la funzionalità SNMP sul pc che si vuole monitorare, per farlo bisogna seguire i seguenti passi:
 - 1 Fare click su "Start"
 - 2 Cliccare su "Impostazioni"
 - 3 Clicare su "App"
@@ -26,13 +27,14 @@ Una volta che il servizio sarà abilitato bisognerà configurarlo:
 - 8 Chiudere le proprietà e cliccare nuovamente col tasto destro del mouse su "Servizio SNMP"
 - 9 Cliccare su "Riavvia"
 
-A questo punto il sistema che si vuole monitorare sarà configurato per ricevere le richieste da parte di un altro sistema su cui sarà in esecuzione la script snmp_monitorRamProcesses.py
+A questo punto il sistema che si vuole monitorare sarà configurato per ricevere le richieste da parte di un altro sistema su cui sarà in esecuzione lo script snmp_monitorRamProcesses.py
 
-# Installazione
-Lo script è stato sviluppato per ambiente Linux, per poter utilizzare il software è necessario installare i seguenti pacchetti:
+# Installazione su Ubuntu
+Per poter utilizzare il software è necessario installare i seguenti pacchetti su Ubuntu:
 - Python 3.9
 - easysnmp
 - rrdtool
+
 con i seguenti comandi bash:
 
 ```bash
@@ -61,15 +63,18 @@ a:
 # loading them by commenting out the following line.
 #mibs : 
 ```
-Il mib in questione offre una serie di OID che permenttono il monitoraggio delle risorse hardware di un agent; tra i tanti ci sono quelli che  permettono di monitorare lo spazio di archiviazione, spazio occupato in memoria, ram totale e numero di processi "Caricati e attivi".
 
 # Utilizzo
 Per avviarlo basta digitare il comando bash:
 ```bash
 python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
-Dove hostname è l'host target del monitoraggio e community è la community SNMP scelta nella configurazione dell'Agent su Windows 10, a quel punto compariranno le statistiche sul terminale quali:
+Dove hostname è l'host target del monitoraggio e community è la community SNMP scelta nella configurazione dell'Agent su Windows 10
+
+# Esempio di utilizzo
 ```bash
+python3 snmp_monitor_RamProcesses.py 192.168.1.17 home
+
 --> Informazioni sistema operativo: Stringa
 --> Numero di utenti presenti sul sistema operativo: integer
 --> Data del sistema: AAAA-MM-GG HH:MM:SS.mmmmmm
@@ -77,7 +82,7 @@ Dove hostname è l'host target del monitoraggio e community è la community SNMP
 --> Spazio totale su disco: in Gb
 --> Spazio occupato su disco: in Gb
 ```
-Per monitorare il numero dei processi attivi basterà andare nella cartella reports, generata dal programma nella stessa directory in cui si trova lo script, e aprire i files .png corrispondenti alle metriche:
+I grafici per Ram occupata, Ram libera e processi attivi sono nella cartella reports(generata automaticamente dallo script nella diractory in cui si trova)
 
 Grafico per la Ram utilizzata:
 
@@ -90,6 +95,8 @@ Grafico per i Processi caricati e in esecuzione:
 Grafico per la Ram libera:
 
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
+
+Per terminare l'esecuzione dello script basterà digitare Ctrl+C (SIGINT) sulla bash in cui è in esecuzione lo script
 
 # Sviluppo e testing
 Lo script è stato realizzato con Gedit 3.38.0 su sistema operativo Ubuntu 20.10, eseguito su macchina virtuale Oracle Virtualbox 6.1;  ed è stato testato monitorando un agent su cui è installato Windows 10 Pro e attivato il servizio snmp seguendo le istruzioni dell'introduzione.
