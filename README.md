@@ -34,6 +34,8 @@ a:
 # loading them by commenting out the following line.
 #mibs : 
 ```
+Il mib in questione offre una serie di OID che permenttono il monitoraggio delle risorse di un agent tra i tanti ci sono quelli che  permettono di monitorare lo spazio di archiviazione, spazio occupato in memoria, ram totale numero di processi.
+
 # Utilizzo
 Per avviarlo basta digitare il comando:
 ```bash
