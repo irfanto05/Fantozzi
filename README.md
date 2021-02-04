@@ -56,6 +56,8 @@ python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
 Dove hostname è l'host target del monitoraggio e community è la community SNMP scelta nella configurazione dell'Agent su Windows 10, per eseguirlo è necessario inserire entrambi i parametri
 
+Per terminare l'esecuzione dello script basterà digitare Ctrl+C (SIGINT) sulla shell in cui è in esecuzione
+
 # Esempio di utilizzo
 ```bash
 export MIBS=All
@@ -82,7 +84,6 @@ Grafico per la Ram libera:
 
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/freeRam_graph.png)
 
-Per terminare l'esecuzione dello script basterà digitare Ctrl+C (SIGINT) sulla bash in cui è in esecuzione lo script
 
 # Sviluppo e testing
 Lo script è stato realizzato con Gedit 3.38.0 su sistema operativo Ubuntu 20.10, eseguito su macchina virtuale Oracle Virtualbox 6.1;  ed è stato testato monitorando un agent su cui è installato Windows 10 Pro e attivato il servizio snmp seguendo le istruzioni dell'introduzione.
