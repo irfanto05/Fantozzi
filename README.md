@@ -62,7 +62,7 @@ export MIBS=All
 python3 snmp_monitor_RamProcesses.py 192.168.1.17 home
 Start COLLECTING DATA at 192.168.1.17 Hardware: Intel64 Familiy 6 model......
 --> System users number: 2
---> System date: 2021-02-04 15:20:34.124568
+--> System date: 2021-02-04 15:33:12.124568
 --> Total system Ram: 3.907  Gb
 --> Total system storage drive: 112.645 Gb
 --> Occupyed system storage: 79.733  Gb
