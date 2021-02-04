@@ -38,52 +38,38 @@ Per poter utilizzare il software è necessario installare i seguenti pacchetti s
 con i seguenti comandi bash:
 
 ```bash
+sudo apt-get install python3 python3-pip
 sudo apt-get install libsnmp-dev snmp-mibs-downloader gcc python-dev
 pip3 install easysnmp
-pip3 install rrdtool
+sudo apt-get install python3-rrdtool
 ```
-Lo script utilizza il Mib HOST-RESOURCES-MIB (.1.3.6.1.2.1.25)
-Inoltre per evitare errori come:
-
-```bash
-easysnmp.exceptions.EASYSNMPUnknownObjectIDError: unknown object id (hrStorageSize)
-```
-Bisognerà andare a modificare il file in "/etc/snmp/snmp.conf" aprendolo con un editor di testo e modificare la riga "mibs: " commentandola
-da:
-```bash
-# As the snmp packages come without MIB files due to license reasons, loading
-# of MIBs is disabled by default. If you added the MIBs you can reenable
-# loading them by commenting out the following line.
-mibs : 
-```
-a:
-```bash
-# As the snmp packages come without MIB files due to license reasons, loading
-# of MIBs is disabled by default. If you added the MIBs you can reenable
-# loading them by commenting out the following line.
-#mibs : 
-```
+Lo script utilizza i Mib HOST-RESOURCES-MIB (.1.3.6.1.2.1.25) e SNMPv2-MIB::sysDescr(.1.3.6.1.2.1.1.1)
 
 # Utilizzo
-Per avviarlo basta digitare il comando bash:
+Prima dieseguire lo script digitare il comando:
+```bash
+export MIBS=ALL
+```
+Dopo basterà digitare:
 ```bash
 python3 snmp_monitor_RamProcesses.py [hostname] [community]
 ```
-Dove hostname è l'host target del monitoraggio e community è la community SNMP scelta nella configurazione dell'Agent su Windows 10
+Dove hostname è l'host target del monitoraggio e community è la community SNMP scelta nella configurazione dell'Agent su Windows 10, per eseguirlo è necessario inserire entrambi i parametri
 
 # Esempio di utilizzo
 ```bash
+export MIBS=All
 python3 snmp_monitor_RamProcesses.py 192.168.1.17 home
-
---> Informazioni sistema operativo: Stringa
---> Numero di utenti presenti sul sistema operativo: integer
---> Data del sistema: AAAA-MM-GG HH:MM:SS.mmmmmm
---> Ram totale del sistema: in Gb
---> Spazio totale su disco: in Gb
---> Spazio occupato su disco: in Gb
+Start COLLECTING DATA at 192.168.1.17 Hardware: Intel64 Familiy 6 model......
+--> System users number: 2
+--> System date: 2021-02-04 15:20:34.124568
+--> Total system Ram: 3.907  Gb
+--> Total system storage drive: 112.645 Gb
+--> Occupyed system storage: 79.733  Gb
+--> For checking processes, busy Ram and free Ram in real time open the .png files whit associated names in reports/
++++++++++++++++++++++ To stop collecting press Ctrl+C ++++++++++++++
 ```
 I grafici per Ram occupata, Ram libera e processi attivi sono nella cartella reports(generata automaticamente dallo script nella diractory in cui si trova)
-
 Grafico per la Ram utilizzata:
 
 ![alt text](https://github.com/irfanto05/Fantozzi/blob/main/ram_graph.png)
