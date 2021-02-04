@@ -35,7 +35,7 @@ Per poter utilizzare il software è necessario installare i seguenti pacchetti s
 - easysnmp
 - rrdtool
 
-con i seguenti comandi bash:
+con i seguenti comandi sulla shell:
 
 ```bash
 sudo apt-get install python3 python3-pip
@@ -46,7 +46,7 @@ sudo apt-get install python3-rrdtool
 Lo script utilizza i Mib HOST-RESOURCES-MIB (.1.3.6.1.2.1.25) e SNMPv2-MIB::sysDescr(.1.3.6.1.2.1.1.1)
 
 # Utilizzo
-Prima dieseguire lo script digitare il comando:
+Prima di eseguire lo script digitare il comando sulla shella:
 ```bash
 export MIBS=ALL
 ```
