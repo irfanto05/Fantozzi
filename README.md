@@ -46,7 +46,7 @@ sudo apt-get install python3-rrdtool
 Lo script utilizza i Mib HOST-RESOURCES-MIB (.1.3.6.1.2.1.25) e SNMPv2-MIB::sysDescr(.1.3.6.1.2.1.1.1)
 
 # Utilizzo
-Prima di eseguire lo script digitare il comando sulla shella:
+Prima di eseguire lo script digitare il comando sulla shell:
 ```bash
 export MIBS=ALL
 ```
